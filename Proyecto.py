@@ -68,8 +68,55 @@ def modificar():
     file.write(salida)
     file.close()
 
+def mostrar():
+    tree = leerXML("Libreria.xml")
+    cont = 0
+
+    for libro in tree:
+        print("Libro:", cont)
+        cont += 1
+        for elemento in libro:
+            print("\t", elemento.tag, ":", elemento.text)
+    
+def borrar():
+    tree = leerXML("Libreria.xml")
+    titulo = input("Introduce el titulo del libro que quieres borrar:")
+    pos = buscar(tree,titulo)
+    if (pos != -1):
+        del (tree[pos])
+        print(titulo, "borrado")
+    else:
+        print("Titulo no encontrado")
+    opcion = input("Quieres borrar otro titulo?(si/otro)")
+    while (opcion.upper() == "SI"):
+        titulo = input("Introduce el titulo del libro que quieres borrar:")
+        pos = buscar(tree, titulo)
+        if (pos != -1):
+            del (tree[pos])
+            print(titulo, "borrado")
+        else:
+            print("Titulo no encontrado")
+        opcion = input("Quieres borrar otro titulo?(si/otro)")
+
+    salida = prettify(tree)
+    file = open("Libreria.xml","w")
+    file.write(salida)
+    file.close()
+
+def buscarLibro():
+    tree = leerXML("Libreria.xml")
+    titulo = input("Introduce el titulo del libro que quieres buscar:")
+    pos = buscar(tree,titulo)
+    for libro in tree:
+        if(libro[0].text==titulo):
+            print("Libro: ",pos)
+            
 print("EMPEZAMOS")
 
 alta()
+mostrar()
+borrar()
+modificar()
+buscarLibro()
 
 print("FIN")
