@@ -71,7 +71,7 @@ def modificar():
 def mostrar():
     tree = leerXML("Libreria.xml")
     cont = 0
-
+    
     for libro in tree:
         print("Libro:", cont)
         cont += 1
@@ -106,17 +106,35 @@ def borrar():
 def buscarLibro():
     tree = leerXML("Libreria.xml")
     titulo = input("Introduce el titulo del libro que quieres buscar:")
-    pos = buscar(tree,titulo)
+    libroBuscado = ""
+
     for libro in tree:
-        if(libro[0].text==titulo):
-            print("Libro: ",pos)
+        for elemento in libro:
+            if elemento.text == titulo:
+                libroBuscado = libro
+    libroBuscado
+    for elemento2 in libroBuscado:
+        print("\t", elemento2.tag, ":", elemento2.text)
+
+def menu():
+    op = ""
+    while op != "0":
+        op = input("Introduce una opcion:\n1-ALTA\n2-BAJA\n3-MODIFICAR\n4-BUSCAR\n5-MOSTRAR TODOS\n6-Buscar Libro\n0-SALIR\n")
+        if op == "1":
+            alta()
+        elif op == "2":
+            borrar()
+        elif op == "3":
+            modificar()
+        elif op == "4":
+            buscar()
+        elif op == "5":
+            mostrar()
+        elif op == "6":
+            buscarLibro()
             
 print("EMPEZAMOS")
 
-alta()
-mostrar()
-borrar()
-modificar()
-buscarLibro()
+menu()
 
 print("FIN")

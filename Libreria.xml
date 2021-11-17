@@ -1,0 +1,161 @@
+<?xml version="1.0" ?>
+<Libreria>
+  
+  
+  
+  
+  
+  
+  
+  
+  <libro>
+    
+    
+    
+    
+    
+    
+    
+    
+    <titulo>La casa</titulo>
+    
+    
+    
+    
+    
+    
+    
+    
+    <autor Genero="M" Edad="22">Paca</autor>
+    
+    
+    
+    
+    
+    
+    
+    
+    <genero>femenino</genero>
+    
+    
+    
+    
+    
+    
+    
+    
+    <anio>199</anio>
+    
+    
+    
+    
+  
+  
+  
+  
+  </libro>
+  
+  
+  
+  
+
+  
+  
+  
+  <libro>
+    
+    
+    
+    
+    
+    
+    <titulo>sdfsdf</titulo>
+    
+    
+    
+    
+    
+    
+    <autor Genero="H" Edad="54">dfsfd</autor>
+    
+    
+    
+    
+    
+    
+    <genero>fdfsdf</genero>
+    
+    
+    
+    
+    
+    
+    <anio>484</anio>
+    
+    
+    
+  
+  
+  
+  </libro>
+  
+  
+  
+
+  
+  
+  <libro>
+    
+    
+    
+    
+    <titulo>Titulo1</titulo>
+    
+    
+    
+    
+    <autor Genero="h" Edad="45">fsdfsd</autor>
+    
+    
+    
+    
+    <genero>dfsdf</genero>
+    
+    
+    
+    
+    <anio>459</anio>
+    
+    
+  
+  
+  </libro>
+  
+  
+
+  
+  <libro>
+    
+    
+    <titulo>titulo1</titulo>
+    
+    
+    <autor Genero="h" Edad="45">fsdfsdf</autor>
+    
+    
+    <genero>sdfsdf</genero>
+    
+    
+    <anio>199</anio>
+    
+  
+  </libro>
+  
+
+  <libro>
+    <titulo>titulo4</titulo>
+    <autor Genero="m" Edad="54">fdsf</autor>
+    <genero>fdfsd</genero>
+    <anio>487</anio>
+  </libro>
+</Libreria>
